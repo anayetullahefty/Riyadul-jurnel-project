@@ -59,3 +59,7 @@ az vm extension set \
 **Screenshot of Azure Portal:** Shows the created container in the Azure Portal.
 ![container](images/week8-task6_container.png)
 
+## Task 7. Create a Resource Lock
+**Difference Between Locks:**
+- **Read-Only Lock:** Blocks changes to a resource's configuration or properties (e.g., editing settings or resizing a VM), ensuring the resource remains as-is, but permits deletion. Useful for protecting resource settings from accidental modifications.
+- **Delete Lock:** Prevents a resource from being deleted, ensuring it remains in the Azure environment, but allows changes to its configuration or properties. Ideal for safeguarding critical resources from accidental removal.
