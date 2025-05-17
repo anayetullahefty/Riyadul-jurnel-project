@@ -5,7 +5,7 @@ Visited https://msle.learnondemand.net/, selected "Register with Training Key," 
 
 ## Task 3: Create an Azure Resource
 In this task, I createed a virtual machine using the Azure portal by followed the provided instructions.
-created_resource.png
+
 ![created_resource](images/created_resource.png)
 #### List of Resources:
 - **my-VM-51382442 (Virtual Machine)**: This is the main compute resource, an Ubuntu VM, used to run applications and host services like a web server.
