@@ -38,9 +38,9 @@ az vm extension set \
 --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'
 ```
 **Public IP Address:** 172.203.77.6
-**Successfully accessing website with my name**
-![created_resource](images/week8-task4-accessing_web.png)
+**Successfully accessing website with my name**:
 
+![created_resource](images/week8-task4-accessing_web.png)
 **Network Security Rules:**
 - Port 22 (SSH):
 -- Rule Name: default-allow-ssh
