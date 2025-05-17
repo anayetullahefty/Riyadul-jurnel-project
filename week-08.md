@@ -38,13 +38,13 @@ az vm extension set \
 --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'
 ```
 **Public IP Address:** 172.203.77.6
-**Successfully accessing website with my name**:
 
+**Successfully accessing website with my name**:
 ![created_resource](images/week8-task4-accessing_web.png)
 **Network Security Rules:**
 - Port 22 (SSH):
--- Rule Name: default-allow-ssh
-  Description: Allows Secure Shell (SSH) access to the VM for remote administration.
+  - Rule Name: default-allow-ssh
+  - Description: Allows Secure Shell (SSH) access to the VM for remote administration.
 - Port 80 (HTTP):
--- Rule Name: AllowAnyHTTPInbound
-  Description: Allows Hypertext Transfer Protocol (HTTP) access to serve web content.
+  - Rule Name: AllowAnyHTTPInbound
+  - Description: Allows Hypertext Transfer Protocol (HTTP) access to serve web content.
