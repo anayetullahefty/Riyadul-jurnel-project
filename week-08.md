@@ -48,3 +48,14 @@ az vm extension set \
 - Port 80 (HTTP):
   - Rule Name: AllowAnyHTTPInbound
   - Description: Allows Hypertext Transfer Protocol (HTTP) access to serve web content.
+  
+## Task 5: Compare Cloud vs On-premise Costs
+
+
+## Task 6. Create a Storage Blob in Azure
+**Screenshot of Image:** Displays one image uploaded to the created container.
+![an_image](images/week8-task6_image.png)
+
+**Screenshot of Azure Portal:** Shows the created container in the Azure Portal.
+![container](images/week8-task6_container.png)
+
