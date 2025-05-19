@@ -6,7 +6,7 @@ Using `http://192.168.56.2`, we can access the webpage via any web browser. Init
 
 ## Task 3
 
-**HTTP Packet Capture File**: [http-2291459.pcap](image/http-2291459.pcap)
+**HTTP Packet Capture File**: [http-2291459.pcap](images/http-2291459.pcap)
 
 **ARP Table**:
 
@@ -67,7 +67,7 @@ No, when we pressed the button, our web browser probably didn't send any request
 
 ![Packet Diagram](images/week6-task4-packet_diagram.png)
 
-**Packet Diagram file**: [packet_diagram.drawio](image/week6-task4-packet_diagram.drawio)
+**Packet Diagram file**: [packet_diagram.drawio](images/week6-task4-packet_diagram.drawio)
 
 **Size Breakdown:**
 
