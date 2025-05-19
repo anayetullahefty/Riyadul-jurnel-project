@@ -18,7 +18,7 @@ Using `http://192.168.56.2`, we can access the webpage via any web browser. Init
 
 Filter for HTTP packets only to focus on HTTP traffic:
 
-![HTTP Request](images/week6-task4.png)
+![HTTP Request](images/week6-task4-http-req.png)
 
 #### a) Understanding HTTP Request/Response Methods: Motivations, Requests, and Responses
 
