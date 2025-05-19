@@ -48,6 +48,7 @@
    - **Reason**: Maintains a distraction-free environment for studying, especially during exam periods, by limiting non-academic internet use.
 
 **Screenshot**: The screenshot from my TP-Link Archer BE400  emulator shows the Wireless Settings page, displaying SSID ("TP-Link_5G"), Security (WPA2-PSK) etc.
+ ![router-web](./images/week7-task3-tplink.png)
 
 ## Task 4: Self-Evaluation of Teamwork
 
@@ -90,3 +91,4 @@
   - Lisa: 6 commits (e.g., documentation, testing).
 - **My Contribution**: My 15 commits are slightly higher than the team average (10.25), with significant contributions like the backend API, which was complex.
 - **Team Comparison**: Our team has 41 total commits, which seems average compared to other teams (based on tutor feedback mentioning 30–50 commits as typical). Contribution
+
