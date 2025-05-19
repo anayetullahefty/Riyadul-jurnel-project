@@ -25,73 +25,66 @@ Filter for HTTP packets only to focus on HTTP traffic:
 The image shows the following HTTP requests. Here’s the analysis for each:
 
 1. **Time: 0.001271, GET / (HTTP/1.1 200 OK, 495 bytes)**
-   - The user likely entered the server’s IP (`192.168.56.2`) or hostname in the browser to request the root page.
-   - Browser initiated an HTTP GET to the root resource (`/`).
-   - The server responded with a `200 OK` status, delivering a 495-byte HTML file (`text/html`), likely the homepage.
-
+   - The user most likely entered the server's IP (`192.168.56.2`) or hostname in the browser and requested the root of the server.
+   - Browser initiated an HTTP GET to the root resource.
+   - The server response was `200`, the request was delivered, and the server responded with data that the client wanted, which in this case is a 495-byte HTML file (`text/html`) - likely the homepage.
 2. **Time: 0.043549, GET / (HTTP/1.1 200 OK, 618 bytes, text/html)**
-   - This appears to be a subsequent request, possibly due to a page refresh or navigating to the same root page again.
-   - Another GET request for the root (`/`).
-   - The server returned a `200 OK` status with a 618-byte HTML page (`text/html`). The size difference (618 vs. 495 bytes) could indicate an altered page or a different root resource.
-
+   - This looks like a subsequent request, which could be due to the browser doing a page refresh or navigating to the same root page again.
+   - Another GET on the root (`/`).
+   - The server returned HTTP status code: `200`. The response contained an HTML page of size 618 bytes (`text/html`). The size difference of both (618 vs 495 bytes) could be one of an altered page, or maybe it was a different root resource.
 3. **Time: 0.073626, GET /styles.css (HTTP/1.1 200 OK, 389 bytes)**
-   - The browser parsed the root page’s HTML and found a link to a CSS file (`styles.css`) for styling.
-   - HTTP GET request for `/styles.css`.
-   - The server returned a `200 OK` status, delivering a 389-byte CSS file (`text/css`).
-
+   - The browser received and began to parse the root page's HTML, and it found a link to a CSS file (`styles.css`) for styling the page.
+   - HTTP GET for file `/styles.css`.
+   - The server returned the site with a `200 OK` status, delivering a 389-byte CSS file (`text/css`).
 4. **Time: 0.115195, GET / (HTTP/1.1 200 OK, 1064 bytes, text/css)**
-   - This is unusual as the request is for `/` but the response is a CSS file. It’s likely a server misconfiguration or capture error.
-   - HTTP GET request for the root resource (`/`).
-   - The server returned a `200 OK` status but delivered a 1064-byte CSS file (`text/css`), which doesn’t match the expected HTML content.
-
+   - This is unusual because the request is for `/` but the response is a CSS file. It's likely a misconfiguration on the server or an error in the capture. Normally, this would be triggered by the user accessing the root page again.
+   - The root resource (`/`) requested by an HTTP GET.
+   - The server returned the site with a `200 OK` status, but delivered a 1064-byte CSS file (`text/css`), which doesn't match the expected HTML content.
 5. **Time: 1.919296, GET /2291459.html (HTTP/1.1 200 OK, 538 bytes)**
-   - The user likely clicked a link on the homepage or manually entered the URL.
-   - HTTP GET request for `/2291459.html`.
-   - The server returned a `200 OK` status, delivering a 538-byte HTML file (`text/html`), likely a user-created webpage.
-
+   - User probably followed to a particular page, clicking on a link on the home page, or entered the URL manually.
+   - HTTP GET requests for the file `/2291459.html`.
+   - The server returned the `200 OK` status, delivering a 538-byte HTML file (`text/html`), which is likely the user's newly created web page.
 6. **Time: 1.921215, GET / (HTTP/1.1 200 OK, 104 bytes, text/html)**
-   - This could be due to the browser automatically refreshing the root page or the user navigating back to the homepage.
+   - This can be caused either by the browser automatically refreshing the root page, or by the user navigating back to the homepage.
    - HTTP GET request for the root resource (`/`).
-   - The server returned a `200 OK` status, delivering a 104-byte HTML file (`text/html`), smaller than previous root responses (possibly cached or a smaller version).
+   - Server returned the `200 OK` status, delivering a 104-byte HTML file (`text/html`), which is much smaller than previous root responses (possibly cached or a smaller version).
 
 #### b) First HTTP Request Details
+The first HTTP request is at **Time 0.001271 (Frame 6)**. The 5 address values are:
 
-The first HTTP request occurs at **Time: 0.001271 (Frame 6)**. The five address values are:
-
-1. **Source IP Address (Host)**: `192.168.56.1` (client)
-2. **Destination IP Address (Host)**: `192.168.56.2` (server)
-3. **Source Port (Transport Protocol)**: `64749`
-4. **Destination Port (Transport Protocol)**: `80` (standard HTTP port)
-5. **Application Protocol**: HTTP (indicated by the `GET / HTTP/1.1` request)
+1. **Source IP Address (Host):** `192.168.56.1` (client).
+2. **Destination IP Address (Host):** `192.168.56.2` (server).
+3. **Source Port (Transport Protocol):** `64749`.
+4. **Destination Port (Transport Protocol):** `80` (standard HTTP port).
+5. **Application Protocol:** HTTP (Hypertext Transfer Protocol, as indicated by the `GET / HTTP/1.1` request).
 
 #### c) Browser Behavior: Web Server Request on Clicking "Time & Date" Button
+No, when we pressed the button, our web browser probably didn't send any requests to the web server.
 
-No, clicking the "Time & Date" button likely does not trigger a web server request. 
-
-**Reason**: The date and time display is handled client-side, likely using JavaScript (e.g., the `Date()` function) to retrieve the local system credit: time. No additional HTTP requests appear in the packet capture to indicate a server request for this action.
+**Reason:** It's client-side handling of things, to put up the time and date of rendering on screen + use the computer's time [which is done a lot of times with client-side scripting (in JavaScript, as used to get the local time on the browser from your system, with `Date()` function). No browser will do a new HTTP request to the web server to perform this & write it to the client because it can ask the user's device for the current date/time. There aren't any more HTTP requests in the packet capture that would be indicative of such an action, and that's not looking like any server request was made.
 
 #### d) Diagram of `/2291459.html` HTTP Request
 
-**HTTP Request**: `GET /2291459.html HTTP/1.1`
-
-**Packet Diagram File**: [packet_diagram.drawio](image/week6-task4-packet_diagram.drawio)
+**HTTP request:** `GET /2291459.html HTTP/1.1`. Let's break down the packet structure, including header sizes and addresses.
 
 ![Packet Diagram](images/week6-task4-packet_diagram.png)
 
-**Size Breakdown**:
+**Packet Diagram file**: [packet_diagram.drawio](image/week6-task4-packet_diagram.drawio)
 
-- **Ethernet Header**: 14 bytes
-- **IPv4 Header**: 20 bytes
-- **TCP Header**: 20 bytes
-- **HTTP Request**: 484 bytes (as per packet details: Len: 484 bytes)
-- **Total Packet Size**: 14 + 20 + 20 + 484 = 538 bytes
+**Size Breakdown:**
 
-**Addresses Included**:
+- **Ethernet Header:** 14 bytes
+- **IPv4 Header:** 20 bytes
+- **TCP Header:** 20 bytes
+- **HTTP Request:** 484 bytes (as per the packet details: Len: 484 bytes).
+- **Total Packet Size:** 14 + 20 + 20 + 484 = 538 bytes.
 
-- **Ethernet Layer**: Source MAC: `0a:00:27:00:00:09`, Destination MAC: `08:00:27:05:2b:d9`
-- **IP Layer**: Source IP: `192.168.56.1`, Destination IP: `192.168.56.2`
-- **TCP Layer**: Source Port: `64749`, Destination Port: `80`
-- **HTTP Layer**: Host header contains the destination host (`192.168.56.2`)
+**Addresses Included:**
+
+- **Ethernet Layer:** MAC (Source) (`0a:00:27:00:00:09`), and MAC (Destination) (`08:00:27:05:2b:d9`).
+- **IP Layer:** IP (Source) (`192.168.56.1`), IP (Destination) (`192.168.56.2`).
+- **TCP Layer:** Port (Source) (`64749`), Port (Destination) (`80`).
+- **HTTP Layer:** Host header contains the destination host (`192.168.56.2`).
 
 #### e) Referrer for `/2291459.html` HTTP Request
 
@@ -107,7 +100,7 @@ No, clicking the "Time & Date" button likely does not trigger a web server reque
 
 #### f) Server-Learned Data About the Web Browser
 
-The HTTP request includes a `User-Agent` header, revealing browser details. From the packet capture:
+Headers The `HTTP-request` includes the `User-Agent` header, which discloses the browser of the user. The User-Agent string itself doesn’t appear in the capture, but if you look at the details of the HTTP packet at the right of the screenshot, you can see part of the HTTP request:
 
 **User-Agent**: `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edge/126.0.0.0`
 
