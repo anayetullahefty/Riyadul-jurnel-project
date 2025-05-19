@@ -1,32 +1,53 @@
-# COIT20246 Week 07 Tutorial Journal
-
-## Task 2: View Wi-Fi Details
+## Task 2
 
 **AP Information**:
 1. **AP 1**:
    - **SSID**: he!!o
    - **BSSID**: 58:11:22:14:43:0c
-   - **Frequency Band**: 5 GHz
-   - **Channel**: 11
-   - **Data Rate**: 50 Mbps
+   - **Frequency Band**: 2.4 GHz
+   - **Channel**: 6
+   - **Data Rate**: 30 Mbps
 2. **AP 2**:
    - **SSID**: Virous!
    - **BSSID**: 62:83:e7:22:ea:93
    - **Frequency Band**: 5 GHz
-   - **Channel**: 48
+   - **Channel**: 5
    - **Data Rate**: 100 Mbps
 
-## Task 3: Use Wi-Fi Access Point
+## Task 3
 
 **Important Settings and Considerations**:
 
-1. **SSID**: Current: "HomeWiFi". Consider changing to a unique name like "SmithHome5G" to distinguish from neighbors’ networks and clarify band (5 GHz).
-2. **Channel**: Current: Auto (2.4 GHz, Channel 6). For 2.4 GHz, set to Channel 1, 6, or 11 based on least interference (use WiFi Analyzer to check). For 5 GHz, set to a high channel (e.g., 149) to avoid radar interference.
-3. **Security Mode**: Current: WPA2-PSK. Consider upgrading to WPA3 for enhanced security if all devices support it, to protect against brute-force attacks.
-4. **Guest Network**: Current: Disabled. Enable a guest network with a separate SSID (e.g., "GuestWiFi") and limited access to enhance security for visitors.
-5. **QoS**: Current: Disabled. Enable QoS to prioritize bandwidth for critical applications like Zoom for online classes, limiting gaming or streaming impact.
+1. **SSID**: 
+   - **Current**: "he!!o"
+   - **Consideration**: Change to a unique name like "SmithHome5G" to distinguish from neighbors’ networks and indicate 5 GHz band for clarity, especially in a dense apartment complex.
+   - **Reason**: Reduces confusion for devices and users, improving connection reliability.
+2. **Channel**: 
+   - **Current**: Auto (2.4 GHz, Channel 6; 5 GHz, Channel 36)
+   - **Consideration**: For 2.4 GHz, manually set to Channel 1, 6, or 11 based on WiFi Analyzer’s interference data (e.g., Channel 1 if least congested). For 5 GHz, set to a high channel (e.g., 149) to avoid radar interference.
+   - **Reason**: Manual channel selection minimizes overlap with nearby APs, boosting performance in crowded areas.
 
-**Screenshot Description**: The screenshot from my TP-Link Archer AX73 emulator shows the Wireless Settings page, displaying SSID ("TP-Link_5G"), Channel (36 for 5 GHz), Security (WPA2-PSK), and Guest Network (Disabled). The interface is user-friendly, with tabs for Basic and Advanced settings.
+3. **Security Mode**: 
+   - **Current**: WPA2-PSK
+   - **Consideration**: Upgrade to WPA3 if all devices support it (check compatibility for older devices like IoT gadgets).
+   - **Reason**: WPA3 offers stronger encryption and protection against brute-force attacks, critical for securing sensitive data like university assignments.
+
+4. **QoS (Quality of Service)**: 
+   - **Current**: Disabled
+   - **Consideration**: Enable QoS to prioritize bandwidth for critical applications like Zoom for online classes or Blackboard access, limiting bandwidth for non-essential tasks like streaming.
+   - **Reason**: Ensures stable performance for academic tasks in a shared household with multiple users.
+
+5. **Access Control**: 
+   - **Current**: Disabled
+   - **Consideration**: Enable Access Control to whitelist only known devices (e.g., by MAC address, such as my laptop and phone) and block unauthorized devices.
+   - **Reason**: Prevents unauthorized access, critical in a university context where roommates or visitors might attempt to connect, potentially compromising network security.
+
+6. **Parental Controls**: 
+   - **Current**: Disabled
+   - **Consideration**: Enable Parental Controls to restrict access for specific devices (e.g., a sibling’s tablet) during study hours (e.g., 8 AM–6 PM) or block inappropriate content.
+   - **Reason**: Maintains a distraction-free environment for studying, especially during exam periods, by limiting non-academic internet use.
+
+**Screenshot**: The screenshot from my TP-Link Archer BE400  emulator shows the Wireless Settings page, displaying SSID ("TP-Link_5G"), Security (WPA2-PSK) etc.
 
 ## Task 4: Self-Evaluation of Teamwork
 
