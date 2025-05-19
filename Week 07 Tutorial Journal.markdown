@@ -3,32 +3,18 @@
 ## Task 2: View Wi-Fi Details
 
 **AP Information**:
-
 1. **AP 1**:
-   - **SSID**: CQU-WiFi
-   - **BSSID**: 00:1A:2B:3C:4D:5E
+   - **SSID**: he!!o
+   - **BSSID**: 58:11:22:14:43:0c
    - **Frequency Band**: 5 GHz
-   - **Channel**: 36
-   - **Data Rate**: 433 Mbps
-   - **Notes**: Observed on campus using WiFi Analyzer on Android. The 5 GHz band supports higher speeds, ideal for high-density areas like lecture halls, but has shorter range.
-
+   - **Channel**: 11
+   - **Data Rate**: 50 Mbps
 2. **AP 2**:
-   - **SSID**: MyHotspot
-   - **BSSID**: 12:34:56:78:9A:BC
-   - **Frequency Band**: 2.4 GHz
-   - **Channel**: 6
-   - **Data Rate**: 54 Mbps
-   - **Notes**: My mobile hotspot, set up via Android. The 2.4 GHz band offers better range but lower speeds, suitable for basic browsing in low-interference areas.
-
-3. **AP 3**:
-   - **SSID**: CafeWiFi
-   - **BSSID**: 5A:6B:7C:8D:9E:0F
+   - **SSID**: Virous!
+   - **BSSID**: 62:83:e7:22:ea:93
    - **Frequency Band**: 5 GHz
    - **Channel**: 48
-   - **Data Rate**: 866 Mbps
-   - **Notes**: Public Wi-Fi at a nearby café, accessed via WiFi Analyzer. The high data rate suggests 802.11ac support, but signal strength was weaker due to distance.
-
-**General Notes**: Data collected using WiFi Analyzer, which provided clear visuals of channel overlap and signal strength. The 5 GHz APs (CQU-WiFi, CafeWiFi) offer higher speeds but require closer proximity, while the 2.4 GHz hotspot is more reliable over distance.
+   - **Data Rate**: 100 Mbps
 
 ## Task 3: Use Wi-Fi Access Point
 
