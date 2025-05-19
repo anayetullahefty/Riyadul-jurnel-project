@@ -163,9 +163,11 @@ In the TCP protocol, ACK (acknowledgements) is sent to acknowledge receipt of 
 
 ## Task 5
 
-**Screenshot**: Cookies set by the BBC website (`bbc.com`) in the browser’s Application tab (Storage section).
+The following Screenshot of the cookies set by BBC website (bbc. com) in the Storage section of the browser's Application tab.
 
-Cookies are small pieces of data stored on a user’s computer to track activity, manage sessions, or remember preferences. Below is an analysis of the types of information typically found in cookies like those listed (covering 30 days of activity):
+![Cookie](images/week6-task5_cookie.png)
+
+Cookie are a tiny piece of information websites store on a users computer to keep track of activity, such as remembering preferences or managing sessions. Here is a guide to the kinds of information generally found in cookies like those listed; these are cookies measuring just 30 days of activity.
 
 1. **Session and Authentication Data**:
    - Cookies like `ckns_explicit` or `ckns_policy` store user consent for cookie usage or privacy policies.
