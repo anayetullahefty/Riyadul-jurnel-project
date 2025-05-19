@@ -151,24 +151,24 @@ The HTTP request includes a `User-Agent` header, revealing browser details. From
 
 #### i) TCP Acknowledgments (ACKs)
 
-In TCP, ACKs confirm receipt of data. From the packet capture:
+In the TCP protocol, ACK (acknowledgements) is sent to acknowledge receipt of data. From the packet capture:
 
-- **Packet 5**: `[ACK] Seq=1 Ack=1 Win=65280 Len=0` – Part of TCP handshake, acknowledging SYN-ACK.
-- **Packet 7**: `[ACK] Seq=1 Ack=442 Win=64808 Len=0` – Acknowledges server data.
-- **Packet 9**: `[ACK] Seq=442 Ack=42 Win=65280 Len=4` – Acknowledges HTTP response.
+- **Packet 5**: `[ACK] Seq=1 Ack=1 Win=65280 Len=0` – This is parts of the TCP handshakes, acknowledging the SYN-ACK.
+- **Packet 7**: `[ACK] Seq=1 Ack=442 Win=64808 Len=0` – Acknowledges data from the server.
+- **Packet 9**: `[ACK] Seq=442 Ack=42 Win=65280 Len=4` – Acknowledges receipt of an HTTP response..
 - **Packet 11**: `[ACK] Seq=686 Ack=777 Win=64768 Len=0` – Acknowledges more data.
 - **Packet 13**: `[ACK] Seq=777 Ack=647 Win=64768 Len=0` – Another acknowledgment.
 - **Packet 15**: `[ACK] Seq=777 Ack=1657 Win=65280 Len=0` – Acknowledges further data.
 - **Packet 17**: `[ACK] Seq=1657 Ack=1261 Win=64080 Len=0` – Acknowledges additional data.
 - **Packet 19**: `[ACK] Seq=1261 Ack=3158 Win=65280 Len=0` – Acknowledges more data.
-- **Packet 21**: `[ACK] Seq=3158 Ack=3208 Win=65280 Len=0` – Final acknowledgment.
+- **Packet 21**: `[ACK] Seq=3158 Ack=3208 Win=65280 Len=0` – Final acknowledgment in this capture.
 
-**ACK Behavior**:
+**The usual acknowledgment in TCP is:**:
 
-- **On Segment Receipt**: TCP ACKölker: s correctly received segments (e.g., Packet 13 acknowledges Packet 12’s response after Packet 10’s GET request).
-- **During Handshake**: Packet 5 completes the 3-way handshake.
-- **Delayed ACKs**: TCP may delay ACKs (e.g., after two segments or a 200 ms timeout) to reduce overhead.
-- **Selective ACKs (SACK)**: Used for out-of-order packets or retransmissions, as seen with the `SACK_PERM` option.
+- **On receiving a segment**: TCP ACKs segments that are received correctly. For instance, after the client has issued an HTTP GET request (Packet 10) the server responds with data (Packet 12), followed by an ACK (Packet 13) from the client, acknowledging the received data.
+- **During the TCP Handshake**: As seen in Packet 5, an ACK is sent to complete the three-way handshake.
+- **After a certain amount of data**: TCP can be using delayed ACKs, meaning an ACK is sent after a predefined amount of data comes in (e.g., two segments) or a timeout (usually 200 ms) occurs to minimize overhead.
+- **To acknowledge out-of-order packets or retransmissions:**: If packets are received out of order, TCP uses selective ACKs (SACK) to acknowledge specific segments, as seen in the `SACK_PERM` option in the packets..
 
 ## Task 5
 
@@ -181,35 +181,27 @@ Cookies are small pieces of data stored on a user’s computer to track activity
    - `sp_su` (highlighted) may indicate a user ID or session token for maintaining logged-in states or tracking sessions.
 
 2. **Tracking and Analytics**:
-   - Cookies like `atid`, `atuserid`, or `atuserid` track user behavior across the site, storing unique identifiers for analytics (e.g., page visits).
-   - `chartbeat2` and `chartbeat4` relate to Chartbeat, a real-time analytics service, monitoring engagement with page elements.
+   - Cookies like `atid`, `atuserid`, or `atuserid` are typically used for tracking user behavior across the site. These might store unique identifiers to monitor how users interact with the website, often for analytics purposes (e.g., which pages are visited).
+   - `chartbeat2` and `chartbeat4` is related to Chartbeat, a real time analytics service. Cookies for monitoring engagement and interaction with specific elements on the page.
 
 3. **Personalization**:
-   - Cookies like `pid`, `pctx`, or `pcus` store preferences or settings (e.g., location, language, content recommendations). `pid` may be a personalization ID for tailored news content.
+   - Cookies like `pid`, `pctx`, or `pcus` might store user preferences or personalized settings, such as location, language, or content recommendations. For example, `pid` could be a personalization ID to tailor news content based on user interests. 
 
 4. **Advertising**:
-   - Cookies like `ad_id` or long alphanumeric values (e.g., `J62H5...`) are tied to advertising networks, delivering targeted ads or tracking impressions/performance.
-   - `gads` likely relates to Google Ads for ad targeting or conversion tracking.
+   - Cookies such as `ad_id` or those with long alphanumeric values (e.g., J62H5...) are often tied to advertising networks. They store data to deliver targeted ads, track ad impressions, or measure ad performance.
+   - `gads` likely relates to Google Ads, storing information for ad targeting or conversion tracking.
 
 5. **Security and Functionality**:
-   - **Secure Flag**: Ensures cookies are sent over HTTPS for security.
-   - **HttpOnly**: Prevents client-side scripts from accessing cookies, reducing XSS risks.
-   - **SameSite Settings** (e.g., `Lax` or `None`): Controls cookie behavior in cross-site requests to prevent CSRF attacks.
+   - **Secure Flag**: The Secure flag (appearing on some cookies), which tells the browser to send the cookie over HTTPS, to make it more secure.
+   - **HttpOnly**: Http Only (present as well) prevents client side scripts from reading the cookie, reducing XSS risk. 
+   - **SameSite Settings** (e.g., `Lax` or `None`): SameSite settings (for example, Lax or None) determine how cookies are sent in cross-site requests, which prevents cross-site request forgery (CSRF) attacks.
 
 6. **Expiration and Persistence**:
-   - Cookies expire between `2025-05-18` and `2026-11-14`, persisting for tracking or functionality.
-   - Some, like `ar_debug`, have shorter lifespans (e.g., `2025-06-17`) for temporary debugging.
+   -The Expires / Max-Age column shows when cookies expire. For example, most cookies here expire between 2025-05-18 and 2026-11-14, meaning they persist for tracking or functionality over that period.
+   - Some cookies, like `ar_debug`, have a shorter lifespan (e.g., 2025-06-17), possibly for temporary debugging purposes.
 
 7. **Size and Priority**:
-   - Cookie sizes (e.g., 177 bytes for `cf_bm`) indicate simple flags or complex data like encoded profiles.
-   - Priority (e.g., `Medium`, `Lax`) reflects browser handling importance.
+   - The Size column indicates the cookie's data size in bytes (e.g., 177 bytes for `cf_bm`). Smaller cookies are typically for simple flags, while larger ones might store more complex data like encoded user profiles.
+   - Priority (e.g., `Medium`, `Lax`) reflects the cookie's importance for browser handling, though this is less about the data type and more about browser behavior.
 
-**Summary**: These cookies support session management, user tracking, personalization, advertising, and security. They enhance website functionality, improve user experience, provide analytics, deliver targeted ads, and implement security measures.
-
-## References
-
-- OpenWrt Forum. “How to Create Custom Page on OpenWrt LuCI.” *OpenWrt Forum*, 15 Jan. 2020, <https://forum.openwrt.org/t/how-to-create-custom-page-on-openwrt-luci/52777>. Accessed 18 May 2025.
-- OpenWRT. “Stack Overflow.” *Stack Overflow*, 24 Apr. 2017, <https://stackoverflow.com/questions/43581169/how-to-add-new-pages-in-openwrt-luci-web-interface>.
-- Spotlight Cybersecurity. “Network Traffic Inspection - TCPDUMP on OpenWRT.” *Spotlightcybersecurity.com*, 10 Oct. 2018, <https://spotlightcybersecurity.com/tcpdump-on-openwrt.html>.
-- Garn, Damon. “Examine a Captured Packet Using Wireshark.” *TechTarget*, 17 Apr. 2023, <https://www.techtarget.com/searchnetworking/tutorial/Examine-a-captured-packet-using-Wireshark>.
-- MSEdgeTeam. “View, Edit, and Delete Cookies - Microsoft Edge Developer Documentation.” *Microsoft.com*, 7 Dec. 2023, <https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/storage/cookies>.
+**Summary**: These cookies contain a mix of session management, user tracking, personalization, advertising, and security-related data. They help the website function smoothly, improve user experience, and provide analytics or targeted ads, while also implementing security measures to protect user data.
