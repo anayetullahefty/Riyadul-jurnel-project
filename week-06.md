@@ -19,12 +19,13 @@ date which is depicts below:
 
 
 **a) Understanding HTTP Request/Response Methods: Motivations, Requests, and Responses**
+
 The image shows the below HTTP requests.  Here’s the analysis for each:
-- 1. Time: 0.001271, GET / (HTTP/1.1 200 OK, 495 bytes) 
+- 1) Time: 0.001271, GET / (HTTP/1.1 200 OK, 495 bytes) 
   - The user most likely entered the servers IP (192.168.56.2) or hostname in browser and requested the root of the server.
   - Browser initiated an HTTP GET to the root resource
   - The server response was 200, the request was delevered, and the server’s responded with data that client wanted, which in this case is a 495 byte HTML file (text/html) - likely the homepage.
-- 2. Time: 0.043549, GET / (HTTP/1.1 200 OK, 618 bytes, text/html) 
+- 2) Time: 0.043549, GET / (HTTP/1.1 200 OK, 618 bytes, text/html) 
   -  This looks like a subsequent request, which could be due to the browser doing a page refresh or navigating to the same root page again.
   - Another GET on the root ("/").
   - The server returned HTTP status code: 200 The response contained an HTML page of size 518 bytes The HTML page (text/html). The size difference of both (618 vs 495 bytes) could be one of an altered page, or maybe it was a different root resource.
