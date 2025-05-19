@@ -1,5 +1,3 @@
-# Week 6 Tasks
-
 ## Task 2
 
 Using `http://192.168.56.2`, we can access the webpage via any web browser. Initially, it opens the index page. Upon clicking the "Show date and time" button, the date and time are displayed as shown below:
