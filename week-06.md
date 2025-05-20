@@ -1,4 +1,8 @@
 ## Task 2
+Files to Create/Edit:
+- [index.html](images/index.html)
+- [12291459.html](images/12291459.html)
+- [styles.css](images/styles.css)
 
 Using `http://192.168.56.2`, we can access the webpage via any web browser. Initially, it opens the index page. Upon clicking the "Show date and time" button, the date and time are displayed as shown below:
 
