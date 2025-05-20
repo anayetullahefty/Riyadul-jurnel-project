@@ -47,48 +47,45 @@
    - **Consideration**: Enable Parental Controls to restrict access for specific devices (e.g., a sibling’s tablet) during study hours (e.g., 8 AM–6 PM) or block inappropriate content.
    - **Reason**: Maintains a distraction-free environment for studying, especially during exam periods, by limiting non-academic internet use.
 
-**Screenshot**: The screenshot from my TP-Link Archer BE400  emulator shows the Wireless Settings page, displaying SSID ("TP-Link_5G"), Security (WPA2-PSK) etc.
- ![router-web](./images/week7-task3-tplink.png)
+**Screenshot**: The screenshot from the TP-Link Archer AX73 emulator shows the Advanced Wireless Settings page, which displaying SSID ("TP-Link_22DD_2.4GG" & 22DD_5G), Channel mode (Auto), Security (WPA2-PSK), Transmit Power (High), Guest Network (Disabled), Access Control (Disabled under Security tab), and Parental Controls (Disabled under Parental Controls tab).
+ ![router-web](./images/week7-task3-homeRouter-defaultSettings.png)
 
 ## Task 4: Self-Evaluation of Teamwork
 
 **Generative AI Prompt and Output**:
 
 - **Prompt**: "List 5 ways to improve teamwork in a university group project."
+![Ai-Prompt](./images/week7-task4-ai.png)
 - **Output**:
-  1. Establish clear communication channels.
-  2. Define roles and responsibilities early.
-  3. Schedule regular team meetings.
-  4. Use collaborative tools for task management.
-  5. Foster a respectful and inclusive environment.
+  1. Set Clear Goals and Expectations Early
+  2. Use Collaborative Tools
+  3. Assign Roles Based on Strengths
+  4. Communicate Regularly and Honestly
+  5. Support Each Other and Stay Accountable
 
-- **Screenshot Description**: The screenshot shows the ChatGPT interface with the above prompt entered and the five suggestions listed in the response.
+
 
 **Comparison with Team Practices**:
 
-1. **Clear Communication**:
+1. **Establish Clear Communication Channels**:
    - **Practiced**: We use a WhatsApp group for quick updates and questions.
-   - **Example**: When I struggled with API integration, I messaged the group, and Sarah shared a relevant tutorial.
-2. **Defined Roles**:
-   - **Practiced**: Roles were assigned in Week 3 (e.g., I’m coding the backend, John handles frontend).
-   - **Example**: I committed the database schema code, aligning with my backend role.
-3. **Regular Meetings**:
+   - **Example**: When I struggled with Clous cost calculation , I messaged the group, and Mamunur shared a relevant tutorial.
+2. **Define Roles and Responsibilities Early**:
+   - **Practiced**: Roles were assigned in Week 3 (e.g., I will design the HQ Network, Mamunur will design  branc Network).
+   - **Example**: I committed the HQ Network diagram, aligning with my role.
+3. **Schedule Regular Team Meetings**:
    - **Not Practiced**: We meet irregularly, often only before deadlines.
    - **Improvement**: Schedule weekly 30-minute Zoom meetings to review progress and plan tasks.
-4. **Collaborative Tools**:
+4. **Use Collaborative Tools for Task Management**:
    - **Practiced**: We use Google Docs for documentation and GitHub for code.
    - **Example**: Our project report draft is in a shared Google Doc, edited by all members.
-5. **Respectful Environment**:
+5. **Foster a Respectful and Inclusive Environment**:
    - **Practiced**: Team members are supportive and open to ideas.
-   - **Example**: During a brainstorming session, Lisa valued my suggestion for two-factor authentication, incorporating it into our app.
-
 **GitHub Commit Analysis**:
 
-- **Screenshot Description**: The GitHub Insights > Contributors page shows commits from our team (4 members):
-  - Me: 15 commits (e.g., backend API, database setup).
-  - John: 12 commits (e.g., UI components).
-  - Sarah: 8 commits (e.g., security features).
-  - Lisa: 6 commits (e.g., documentation, testing).
-- **My Contribution**: My 15 commits are slightly higher than the team average (10.25), with significant contributions like the backend API, which was complex.
-- **Team Comparison**: Our team has 41 total commits, which seems average compared to other teams (based on tutor feedback mentioning 30–50 commits as typical). Contribution
+- **Screenshot Description**: The GitHub Insights > Contributors page shows commits from our team (2 members):
+  - Me: 10 commits 
+  - Mamunur: 12 commits 
 
+- **My Contribution**: My 10 commits are slightly lower than the team average (11 commits). I contributed to designing the HQ network layout, recommending hardware specifications, calculating Azure cloud costs, and conducting the risk assessment for our project. These tasks involved detailed planning and coordination to ensure our network security solution was robust and cost-effective.
+![Commit-Analysis](./images/week7-task4-github.png)
