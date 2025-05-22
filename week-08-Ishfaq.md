@@ -14,3 +14,22 @@ List the resources that were created and give a short explanation of what each r
 ![list_of_resources](images/week8-task3_list_of_resources.png)
 
 ## Task 4: Create an Azure Virtual Machine and Allow Web Access
+- **az Commands Used to Create the VM and Install Nginx**  
+  Here are the commands I used to create the virtual machine and set up Nginx on it:  
+  ```bash
+  az vm create \
+  --resource-group myRGKV-lod51383315 \
+  --name my-VM-51383315 \
+  --image Ubuntu2204 \
+  --admin-username azureuser \
+  --generate-ssh-keys
+
+  # To configure Nginx on VM
+  az vm extension set \
+  --resource-group myRGKV-lod51383315 \
+  --vm-name my-VM-51383315 \
+  --name customScript \
+  --publisher Microsoft.Azure.Extensions \
+  --version 2.1 \
+  --settings '{"fileUris":["https://raw.githubusercontent.com/MicrosoftDocs/mslearn-welcome-to-azure/master/configure-nginx.sh"]}' \
+  --protected-settings '{"commandToExecute": "./configure-nginx.sh"}'
