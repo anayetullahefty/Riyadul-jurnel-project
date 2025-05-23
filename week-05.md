@@ -4,7 +4,7 @@
 **Screenshot(s) of the routing table:**
 ![After Button Click](images/week05-task2-powershell.png)
 
-**Description of Each Row**:
+**Description of 5 Row**:
 1. **Destination: 0.0.0.0/0, Gateway: 192.168.1.1, Interface: 192.168.1.100, Metric: 25**
    - This is the default route. Packets to any IP not matching other routes are sent to the gateway (`192.168.1.1`, my router) via my Wi-Fi interface. The low metric indicates this is the preferred route for non-local traffic.
 2. **Destination: 192.168.1.0/24, Gateway: 0.0.0.0, Interface: 192.168.1.100, Metric: 281**
