@@ -102,4 +102,5 @@ The most discussed scenario involved a student submitting a group project report
 
 **Results and Explanations**: On my home network, using the ipaddress.my website on May 24, 2025, at 09:14 AM UTC+10:00 (equivalent to 07:14 AM +06), the lookup identified my public IP as 2405:6e00:2af:9de5:6d5a:6e38:fe98:3b98, provided by Vodafone Australia Pty Limited with a DSL/Broadband/Cable/Fiber connection, locating me in Sydney, New South Wales, Australia, with coordinates -33.8678 latitude and 151.207052 longitude, and a ZIP code of 2000. This accuracy is impressive, pinpointing my city and state, though it doesn’t specify my exact address, likely due to the ISP’s geolocation data, and it reflects the public IP rather than my device’s private IP.
 
-![Ip-Address-lookup](images/week05-task5-ipAddressLookup.png)
+![Ip-Address-lookup](images/week05-task5-ipAddressLookup.jpeg)
+
