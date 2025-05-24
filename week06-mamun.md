@@ -67,6 +67,10 @@ No, the browser did not perform a request to the server to display the date and 
 #### d) Packet Diagram for HTTP Request/Response of Newly Created Web Page (12301422.html)
 **HTTP request for 12301422.html is packet No. 15 (Time: 9.659994, GET /12301422.html HTTP/1.1, Length: 539 bytes).**
 
+![Packet Diagram](images/week6-task4-packet_diagram.png)
+
+**Origine of Diagram file**: [packet_diagram.drawio](images/week6-task4-packet_diagram.drawio)
+
 **Breakdown of Sizes:**
 - Ethernet Header: 14 bytes
 - IPv4 Header: 20 bytes
@@ -132,3 +136,26 @@ The server can use this to optimize content delivery (e.g., serving browser-spec
 - Packet 24: ACK (Seq=1697 Ack=4629 Win=64512 Len=0).
 
 **When Typically Sent:** Acknowledgments are sent as soon as a TCP segment (e.g., SYN-ACK or data) is received, but they may be delayed by TCP's delayed ACK mechanism (e.g., ~200 ms or after two segments).
+
+## Task 5
+
+
+# COIT20246 Networking and Cyber Security - Week 06 Tutorial Activities
+## Task 5: View Your Cookies [20 min, Homework]
+
+**Explanation of Type of Information Found in Cookies:** From a web browser, cookies are used to store various types of information, including session management, tracking, authentication, and user preferences. The types of information stored include:
+
+![Cookie](images/week6-task5_cookie.png)
+
+1. **Session Identifiers:** Cookies such as `Secure-1PSID`, `Secure-3PSID`, or `cfuvid` store session IDs to track users across multiple pages or future visits to the website.
+2. **Authentication Tokens:** Cookies like `Secure-1PSIDCC`, `Secure-3PSIDCC`, and `_Secure-ENID` store authentication tokens or secure login-related information to authenticate users and prevent unauthorized access to accounts or services.
+3. **Tracking & Analytics:** Cookies such as `_ga`, `_ga_1VC9IXRYWRC`, and `_fbp` are used for tracking visitor behavior. These are typically set by Google Analytics (`_ga`) or Facebook (`_fbp`) to monitor page views, user interactions, and campaign effectiveness.
+4. **User Preferences and Settings:** Cookies like `dds` and `_rb` may store user preferences, such as display settings or user actions, to customize the website experience (e.g., ambient display options or user-specific settings).
+5. **Advertising Identifiers:** Cookies such as `_eoi` and `_rb` (e.g., `ID=497e8c833905...` for `_eoi`) are used for ad targeting, storing user identification information to deliver personalized advertisements.
+6. **Security and Anti-Fraud:** Cookies like `Secure-1PSIDTS` and `Secure-3PSIDTS` (e.g., `sidts=CjIBl...` for `Secure-1PSIDTS`) are used for security purposes, such as session timestamping to prevent replay attacks or ensure secure communication.
+7. **Content Delivery and Performance:** Cookies like `cf_bm` and `cfuvid` (e.g., `NuN45Hdr6RVHC...` for `cf_bm`) are used by Cloudflare for bot management, load balancing, and content delivery optimization.
+8. **Cross-Site Behavior:** The `SameSite` flag (e.g., "None" or "Lax") determines how cookies interact with cross-site requests. "None" allows cookies in cross-site contexts (e.g., third-party embeds), while "Lax" and "Strict" restrict this for security.
+9. **Expiration and Persistence:** The `Expires` column indicates cookie duration. Session cookies (e.g., `cfuvid`) expire when the browser closes, while others persist for months or years.
+10. **Priority and Size:** The `Priority` column ("Medium," "High") indicates the cookie's importance for website functionality, with "High" often tied to essential authentication cookies. The `Size` column (e.g., 177, 82) shows the cookie's data size in bytes.
+
+**Summary:** These cookies manage session tracking, authentication, user behavior tracking, personalization, security, and performance optimization, primarily for services like Google, Cloudflare, and advertising platforms.
