@@ -100,15 +100,6 @@ The most discussed scenario involved a student submitting a group project report
 
 ## Task 5: IP Address Lookup
 
-**Results and Explanations**:
-- **On-Campus Network (CQU-WiFi, May 23, 2025, 11:19 PM +06)**:
-  - Using `whatismyipaddress.com`, my public IP was identified as `103.21.125.10`.
-  - Location: It showed “Queensland, Australia,” likely reflecting CQU’s main campus in Rockhampton.
-  - Accuracy: It correctly identified the region but not my exact location (e.g., specific building), as it uses the university’s registered ISP data.
-- **Home Network (Mobile Data, May 23, 2025, 11:30 PM +06)**:
-  - My public IP was `203.112.45.67`.
-  - Location: It showed “Dhaka, Bangladesh,” consistent with my timezone (+06) and general location.
-  - Accuracy: It pinpointed my city but not my exact address, based on my mobile ISP’s geolocation data.
-- **Explanation**:
-  - Both lookups displayed the public IP assigned by the network provider, not my device’s private IP (e.g., `192.168.1.100`).
-  - Location accuracy varies: On-campus reflects the institution’s region, while mobile data is more precise (city-level) but still generalized. Neither lookup revealed personal details like my name, only network and geographic information.
+**Results and Explanations**: On my home network, using the ipaddress.my website on May 24, 2025, at 09:14 AM UTC+10:00 (equivalent to 07:14 AM +06), the lookup identified my public IP as 2405:6e00:2af:9de5:6d5a:6e38:fe98:3b98, provided by Vodafone Australia Pty Limited with a DSL/Broadband/Cable/Fiber connection, locating me in Sydney, New South Wales, Australia, with coordinates -33.8678 latitude and 151.207052 longitude, and a ZIP code of 2000. This accuracy is impressive, pinpointing my city and state, though it doesn’t specify my exact address, likely due to the ISP’s geolocation data, and it reflects the public IP rather than my device’s private IP.
+
+![Ip-Address-lookup](images/week05-task5-ipAddressLookup.png)
