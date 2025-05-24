@@ -18,6 +18,10 @@ The webpage is accessible through any web browser using `http://192.168.56.2`. I
 
 ## Task 4
 
+Filter for HTTP packets only to focus on HTTP traffic:
+
+![HTTP Request](images/week6-task4-http-req.png)
+
 #### a) Understanding HTTP Request/Response Cycles: Triggers, Requests, and Responses Explained
 - **No. 4: 192.168.56.1 → 192.168.56.2 (HTTP/1.1 & GET, 495 bytes)**
   - Trigger: I opened the browser and navigated to the webserver root (entered server IP or domain name).
