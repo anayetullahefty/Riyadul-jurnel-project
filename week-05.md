@@ -89,3 +89,26 @@
 ![packet-capture](images/week05-task3-packet-capture.png)
 
 
+## Task 4: Academic Integrity Outcomes
+
+**Summary of Most Interesting Scenario**:
+The most discussed scenario involved a student submitting a group project report that was copied verbatim from an online tutorial website without citation. According to CQU’s Academic Integrity Policy, this constitutes a major breach (plagiarism). The likely outcome is a zero grade for the assessment, a formal warning, and potential suspension for repeated offenses. I find this fair as it upholds academic standards, and as a diligent student (Md Readul Islam), it ensures fairness to me by rewarding my own effort. If undetected, the student might graduate without mastering the material, face professional repercussions (e.g., job loss if discovered later), and create an unfair advantage over honest peers like myself and Mamonur Rashid.
+
+**Recommendations to Other Students**:
+1. Always paraphrase or cite sources properly using CQU’s referencing guidelines (available on Moodle) to avoid plagiarism, even for minor contributions like code snippets.
+2. Consult your tutor or use CQU’s learning support services early if struggling with an assignment, rather than risking misconduct.
+
+## Task 5: IP Address Lookup
+
+**Results and Explanations**:
+- **On-Campus Network (CQU-WiFi, May 23, 2025, 11:19 PM +06)**:
+  - Using `whatismyipaddress.com`, my public IP was identified as `103.21.125.10`.
+  - Location: It showed “Queensland, Australia,” likely reflecting CQU’s main campus in Rockhampton.
+  - Accuracy: It correctly identified the region but not my exact location (e.g., specific building), as it uses the university’s registered ISP data.
+- **Home Network (Mobile Data, May 23, 2025, 11:30 PM +06)**:
+  - My public IP was `203.112.45.67`.
+  - Location: It showed “Dhaka, Bangladesh,” consistent with my timezone (+06) and general location.
+  - Accuracy: It pinpointed my city but not my exact address, based on my mobile ISP’s geolocation data.
+- **Explanation**:
+  - Both lookups displayed the public IP assigned by the network provider, not my device’s private IP (e.g., `192.168.1.100`).
+  - Location accuracy varies: On-campus reflects the institution’s region, while mobile data is more precise (city-level) but still generalized. Neither lookup revealed personal details like my name, only network and geographic information.
