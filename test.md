@@ -42,19 +42,16 @@ When the browser loaded `12301422.html`, it saw that the same CSS file (`mystyle
 - **No. 23: 192.168.56.2 → 192.168.56.1 (HTTP/1.1 304 Not Modified, 189 bytes)**  
 This is the server’s reply to the request for `/mystyle.css` in packet No. 20. Since the browser already had the CSS file from earlier, the server sent a 304 Not Modified status, meaning the browser could just use the cached version.
 
-#### b) First HTTP Request/Response: Identifying the Following
-For the first HTTP request, which is packet No. 4 (GET / HTTP/1.1), here’s what I found:  
+#### b) For the first HTTP request, which is packet No. 4 (GET / HTTP/1.1), here’s what I found:  
 1. Source IP Address: 192.168.56.1  
 2. Destination IP Address: 192.168.56.2  
 3. Source Port: 62219  
 4. Destination Port: 80  
 5. Transport Protocol: TCP (since HTTP uses TCP, which I can tell from the packet capture).
 
-#### c) Did the browser request the server for the date and time when the button was clicked?  
-No, the browser didn’t send a request to the server when I clicked the "Show date and time" button. I think this is because the date and time are handled by JavaScript on the browser side using something like the `Date()` function. The browser can get the system time directly, so it doesn’t need to ask the server. I didn’t see any HTTP requests in the capture that looked like they were related to the button click.
+#### c) I noticed that when I clicked the "Show date and time" button, the browser didn’t reach out to the server for that info. I figure it’s because the date and time get handled right in the browser with JavaScript, probably using something like the Date() function. The browser can get the system time directly, so it doesn’t need to ask the server. I didn’t see any HTTP requests in the capture that looked like they were related to the button click.
 
-#### d) Packet Diagram for HTTP Request/Response of Newly Created Web Page (12301422.html)  
-The HTTP request for `12301422.html` is packet No. 15 (Time: 9.659994, GET /12301422.html HTTP/1.1, Length: 539 bytes).  
+#### d) The HTTP request for `12301422.html` is packet No. 15 (Time: 9.659994, GET /12301422.html HTTP/1.1, Length: 539 bytes).  
 
 ![Packet Diagram](images/week6-task4-packet_diagram.png)
 
@@ -79,8 +76,7 @@ For packet No. 15 (GET /12301422.html), the referrer is the page I came from. Si
 #### f) HTTP Request from Part (d): Browser Information (Name, Version) Revealed to the Server  
 In packet No. 15 (GET /12301422.html), the HTTP request probably has a User-Agent header that tells the server about my browser. It shows I’m using Chrome, version 137.0.7151.40, on Windows 11 (Windows NT 11.0), with a 64-bit architecture (Win64; x64), and the WebKit rendering engine (AppleWebKit/537.36). The server can use this to make sure the page works well on my browser or to keep track of what browsers people are using.
 
-#### g) Use of HTTP Version and Transport Protocol  
-The HTTP version used here is HTTP/1.1, which I can see in packets like 9, 13, and 19 where it says "HTTP/1.1". The transport protocol is TCP, since all the packets show TCP being used.
+#### g) The HTTP version used here is HTTP/1.1, which I can see in packets like 9, 13, and 19 where it says "HTTP/1.1". The transport protocol is TCP, since all the packets show TCP being used.
 
 #### h) TCP Connection Setup: Packet Analysis and Timing  
 The TCP connection setup involves these packets:  
@@ -88,7 +84,7 @@ The TCP connection setup involves these packets:
 - Packet 2: SYN-ACK (Seq=0 Ack=1 Win=64280 Len=0).  
 - Packet 3: ACK (Seq=1 Ack=1 Win=65280 Len=0).  
 
-To find the time between the start of the connection and the first data transfer:  
+To determine the duration from the beginning of the connection to the initial data transfer:
 - Start: Packet 1 at 0.000047 seconds.  
 - Data Transfer: Packet 5 (HTTP GET) at 0.008091 seconds.  
 - Time: About 0.008044 seconds (or 8.044 ms).
