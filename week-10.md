@@ -15,7 +15,7 @@ I worked with Mamonur Rashid on this task, thinking about our network project wi
 
 ## Task 3
 
-I revisited the assets for our network project with Mamonur Rashid. We expanded it to cover all six asset types, adding details like fake MACs and serials since we don’t have real ones. For Data assets, I included classifications based on value and access, plus protections like CIA (Confidentiality, Integrity, Availability). Below are the updated tables, reflecting the screenshot we prepared.
+I revisited the assets for our network project with Mamonur Rashid. We expanded it to cover all six asset types, adding details like fake MACs and serials since we don’t have real ones. For Data assets, I included classifications based on value and access, plus protections like CIA (Confidentiality, Integrity, Availability). Below are the updated tables:
 
 
 ### Data Assets
