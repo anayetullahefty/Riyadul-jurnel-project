@@ -29,12 +29,12 @@ I revisited the assets for our network project with Mamonur Rashid. We expanded 
 ### Hardware Assets
 | Asset Name         | Identifying Info       | Location                  |
 |--------------------|-----------------------|---------------------------|
-| Router 1           | Serial: R1-9876, MAC: 00:2B:3C:4D:5E:6F | LAN 1 (14.59.1.254)       |
-| Router 2           | Serial: R2-5432, MAC: 00:2B:3C:4D:5E:7G | LAN 2 (14.22.1.254)       |
-| Switch 1           | Serial: S1-1122, MAC: 00:2B:3C:4D:5E:8H | LAN 1                     |
-| Switch 2           | Serial: S2-3344, MAC: 00:2B:3C:4D:5E:9I | LAN 2                     |
-| PC1                | Serial: PC1-5566, MAC: 00:2B:3C:4D:5E:1J | LAN 1 (14.59.1.1)         |
-| PC4                | Serial: PC4-7788, MAC: 00:2B:3C:4D:5E:2K | LAN 2 (14.22.1.1)         |
+| Router 1           | Serial: R1-9876, MAC: 00:11:3C:22:5E:22 | LAN 1 (14.59.1.254)       |
+| Router 2           | Serial: R2-5432, MAC: 11:e4:44:4D:22:7G | LAN 2 (14.22.1.254)       |
+| Switch 1           | Serial: S1-1122, MAC: 45:2B:3C:4D:5E:4g | LAN 1                     |
+| Switch 2           | Serial: S2-3344, MAC: 87:2B:5k:4D:6g:95 | LAN 2                     |
+| PC1                | Serial: PC1-5566, MAC: 65:2B:3C:5s:5E:5h | LAN 1 (14.59.1.1)         |
+| PC4                | Serial: PC4-7788, MAC: 4f:2B:4h:6d:5E:2K | LAN 2 (14.22.1.1)         |
 
 ### Software Assets
 | Asset Name         | Identifying Info       | Version         |
@@ -62,6 +62,6 @@ I revisited the assets for our network project with Mamonur Rashid. We expanded 
 ### Facility Assets
 | Asset Name         | Identifying Info       | Location        |
 |--------------------|-----------------------|-----------------|
-| Data Center        | Room ID: DC-101        | Building C, Floor 3 |
-| Network Hub Room   | Room ID: NH-102        | Building D, Floor 1 |
-| Backup Storage     | Room ID: BS-103        | Building E, Floor 2 |
+| Data Center        | Room ID: DC-101        | Building K, Floor 5 |
+| Network Hub Room   | Room ID: NH-102        | Building L, Floor 7 |
+| Backup Storage     | Room ID: BS-103        | Building M, Floor 6 |
