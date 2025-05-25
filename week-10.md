@@ -1,5 +1,5 @@
 ## Task 2
-I teamed up with Mamonur Rashid for this task, focusing on our network project that includes PCs, routers, and LANs. We selected four security objectives from the NIST Cyber Security Framework to help safeguard our system and spot potential problems, and here’s what we decided on and why they’re important for our setup:
+I teamed up with Mamonur Rashid for this task, focusing on our network project that includes PCs, routers, and LANs. We chose four objectives from the NIST Cyber Security Framework to protect our setup and spot potential problems, and here’s what we decided on and why they’re important for our setup:
 
 - **Function: Protect; Category: Identity Management, Authentication, and Access Control (PR.AC); Sub-category: PR.AC-1 (Access permissions are managed, incorporating the principles of least privilege and separation of duties)**  
   We need this because it helps us manage who can get into our network devices, like the PCs and routers. If someone who shouldn’t be there gets access, they might change settings or take data, so this stops attacks like unauthorized access by only letting users do what they need, like keeping PC users on their own LAN.
