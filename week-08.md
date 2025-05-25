@@ -56,18 +56,21 @@ az vm extension set \
 | **Type**           | **CPU**          | **GPU**         | **RAM** | **Storage** | **Upfront Cost (AUD)** | **1-Year Running Cost (AUD)** | **3-Year Running Cost (AUD)** |
 |---------------------|------------------|-----------------|---------|-------------|-------------------------|-------------------------------|-------------------------------|
 | Consumer Desktop PC | Intel Core i5-12400F | ZOTAC GeForce RTX 4060 8GB | 16GB DDR5 5600MHz | 1TB NVMe SSD | 1,349                   | 150 (electricity)             | 450 (electricity)             |
-| Azure VM            | 4 vCPUs (D4 v5)  | N/A (GPU not specified) | 16GB    | 1TB SSD     | 0 (no upfront cost)     | 2,525.64 (monthly $210.47)    | 7,576.92 (monthly $210.47)    |
+| Azure VM            | 4 vCPUs (D4 v5)  | N/A (GPU not specified) | 16GB    | 1TB SSD     | 0 (no upfront cost)     | 3,838.92 (monthly $319.91)    | 11,515.52 (monthly $319.91)    |
 
-### Screenshot of Consumer PC Cost  
-I found the desktop PC on [PC Case Gear](https://www.pccasegear.com/). It’s on sale for AUD 1,349 (normally AUD 1,499) and includes an Intel Core i5-12400F, ZOTAC GeForce RTX 4060 Twin Edge OC 8GB, 16GB Team T-Force Delta RGB 5600MHz DDR5 RAM, and a 1TB Team T-Force Z44A5 M.2 NVMe PCIe Gen4 SSD, all in a Kolink GSI SmartAssembly ARGB Mesh M-ATX Case with Windows 11 pre-installed. It also comes with a 2-year return to base warranty with shipping costs included. I estimated the electricity cost at about AUD 150 per year (based on average usage and rates in Australia).  
-![Consumer PC Cost](images/week08-task5-consumer-pc-cost.png)
+### Consumer PC Cost  
+I found the desktop PC on [PC Case Gear](https://www.pccasegear.com/products/68710/pccg-banshee-4060-gaming-pc).
 
-### Screenshot from Azure Pricing Calculator  
-For the Azure VM, I used the Azure pricing calculator at [https://azure.microsoft.com/en-us/pricing/calculator/](https://azure.microsoft.com/en-us/pricing/calculator/). My updated estimate shows a D4 v5 VM (4 vCPUs, 16GB RAM) with a 1TB SSD (Premium SSD LRS) in the Australia East region, under a 3-year reserved plan. The cost is USD 210.47 per month, which I converted to AUD using 1 USD = 1.5 AUD, making it AUD 315.71 per month. Since it’s a 3-year reserved plan, I checked similar plans and found the effective monthly rate is around AUD 204.58 after discounts (about 35% off standard rates for reserved instances). That’s AUD 2,454.99 for 1 year and AUD 7,364.97 for 3 years. There’s no GPU, but the VM now matches the tutor’s requirements for CPU (similar to an i5 with 4 cores), RAM (16GB), and storage (1TB SSD).  
-![Azure Pricing Calculator](images/week08-task5-azure-calculator.png)
+![Consumer PC Cost](images/week08-task5-consumarPC.png)
+
+### Azure Pricing Calculator  
+After exporting this price, I convert it to Australian dollars. 
+Currency Conversion: 1 USD = 1.52 AUD (xe.com, May 2025).
+Azure VM Pricing(3 Yeras): $210.47 USD/month × 12 × 3 = $7,576.92 USD × 1.52 = $11,515.52 AUD.
+![Azure Pricing Calculator](images/week08-task5-azureCost.png)
 
 ### Trade-offs Discussion  
-Now that the Azure VM meets the requirements, the comparison feels fairer. The desktop PC is still cheaper overall—AUD 1,499 over 1 year and AUD 1,799 over 3 years, compared to the Azure VM’s AUD 2,454.99 and AUD 7,364.97. That’s a big cost difference, especially over 3 years, since the PC’s main expense is upfront, and electricity isn’t much. The PC also has a great GPU (RTX 4060 8GB), which is perfect for gaming or design work, while the Azure VM doesn’t include a GPU, so it’s not as good for those tasks. Both have 16GB RAM and similar CPU power (i5-12400F with 6 cores vs. 4 vCPUs), but the PC’s extra cores give it a slight edge for multitasking. The downside with the PC is that I’d need to handle maintenance—like fixing hardware or upgrading parts—which could add costs, and I’d have to manage security updates myself.
+Now that the Azure VM meets the requirements, the comparison feels fairer. The desktop PC is still cheaper overall—AUD 1,349 over 1 year and AUD 1,1949 over 3 years, compared to the Azure VM’s AUD 2,454.99 and AUD 7,364.97. That’s a big cost difference, especially over 3 years, since the PC’s main expense is upfront, and electricity isn’t much. The PC also has a great GPU (RTX 4060 8GB), which is perfect for gaming or design work, while the Azure VM doesn’t include a GPU, so it’s not as good for those tasks. Both have 16GB RAM and similar CPU power (i5-12400F with 6 cores vs. 4 vCPUs), but the PC’s extra cores give it a slight edge for multitasking. The downside with the PC is that I’d need to handle maintenance—like fixing hardware or upgrading parts—which could add costs, and I’d have to manage security updates myself.
 
 The Azure VM is more expensive, but it has some advantages. There’s no upfront cost, which is nice if I don’t have AUD 1,349 to spend right away. I can scale it up easily—like adding more CPU or storage—while upgrading the PC means buying new hardware. Azure takes care of maintenance, backups, and security updates, which saves me time, and I can access it from anywhere, unlike the PC, which stays at home. But the monthly cost adds up fast, and if I forget to turn it off, I’ll end up paying more. Also, slow internet could make it tricky to use, and without a GPU, it’s not great for graphics-heavy tasks.
 
