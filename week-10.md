@@ -1,11 +1,11 @@
 ## Task 2
-I worked with Mamonur Rashid on this task, thinking about our network project with PCs, routers, and LANs. We picked four security objectives from the NIST Cyber Security Framework to protect and detect issues. Here’s what we chose and why they matter for our setup:
+I teamed up with Mamonur Rashid for this task, focusing on our network project that includes PCs, routers, and LANs. We selected four security objectives from the NIST Cyber Security Framework to help safeguard our system and spot potential problems, and here’s what we decided on and why they’re important for our setup:
 
 - **Function: Protect; Category: Identity Management, Authentication, and Access Control (PR.AC); Sub-category: PR.AC-1 (Access permissions are managed, incorporating the principles of least privilege and separation of duties)**  
-  This is important because we need to control who can access our network devices, like PCs and routers. If someone unauthorized gets in, they could mess with the settings or steal data. It helps prevent attacks like unauthorized access by limiting permissions to only what’s needed, like restricting PC users to their own LAN.
+  We need this because it helps us manage who can get into our network devices, like the PCs and routers. If someone who shouldn’t be there gets access, they might change settings or take data, so this stops attacks like unauthorized access by only letting users do what they need, like keeping PC users on their own LAN.
 
 - **Function: Protect; Category: Data Security (PR.DS); Sub-category: PR.DS-5 (Protections against data leaks are implemented)**  
-  For our project, protecting data on PCs (e.g., configuration files or user info) is key since it’s stored across the network. This objective helps stop data leaks, which could happen if someone hacks into a router or PC. It mitigates vulnerabilities like eavesdropping on the WAN link between Router 1 and Router 2.
+  Protecting the info on our PCs, such as configuration files and user data, is a big deal for our project because it’s stored everywhere across the network. This objective helps stop data leaks, which could happen if someone hacks into a router or PC. It mitigates vulnerabilities like eavesdropping on the WAN link between Router 1 and Router 2.
 
 - **Function: Detect; Category: Security Continuous Monitoring (DE.CM); Sub-category: DE.CM-1 (The network is monitored to detect potential cybersecurity events)**  
   Monitoring our network is crucial to spot problems early, especially with traffic moving between `14.59.1.0/24` and `14.22.1.0/24`. This helps us catch attacks like a denial-of-service (DoS) attempt that could slow down our routers, keeping the system safe by alerting us to weird activity.
