@@ -1,23 +1,20 @@
-
-## Task 2: Login to Microsoft Learn on Demand
-Visited https://msle.learnondemand.net/, selected "Register with Training Key," and created a Skillable account using my @cqumail.com address. Then logged in with the Skillable account.
+## Task 2:
 ![login_microsoft_learn_on_demand](images/week8-task2_login_microsoft_learn_on_demand.png)
 
-## Task 3: Create an Azure Resource
-In this task, I created Azure Resources using the Azure portal by followed the provided instructions.
-
+## Task 3:
+In this activity, I used the Azure Portal to set up Azure resources by carefully following the given steps.
 #### List of Resources:
-- **my-VM-51382442 (Virtual Machine)**: This is the main compute resource, an Ubuntu VM, used to run applications and host services like a web server.
-- **my-VM-51382442-ip (Public IP Address)**: Assigns a public IP to the VM, enabling external access to the VM, such as for SSH or web access.
-- **my-VM-51382442-nsg (Network Security Group)**: Defines security rules to control inbound and outbound traffic to the VM, such as allowing SSH (port 22) and HTTP (port 80).
-- **my-VM-51382442-vnet (Virtual Network)**: Provides an isolated network environment for the VM to communicate with other Azure resources securely.
-- **my-vm-51382442625_z1 (Network Interface)**: Connects the VM to the virtual network, enabling network communication.
-- **my-VM-51382442_OsDisk_1_b32a2286... (Disk)**: The operating system disk for the VM, storing the Ubuntu OS and related system files.
+- **my-VM-51382442 (Virtual Machine)**: An Ubuntu virtual machine acting as the main computing unit, configured to run applications and services such as a web server.
+- **my-VM-51382442-ip (Public IP Address)**: Supplies an external IP address to the VM, supporting connections for tasks like SSH or accessing websites.
+- **my-VM-51382442-nsg (Network Security Group)**: Defines traffic rules for the VM, allowing network access through SSH on port 22 and HTTP on port 80.
+- **my-VM-51382442-vnet (Virtual Network)**: Sets up a safe network zone for the VM to connect securely with other Azure services.
+- **my-vm-51382442625_z1 (Network Interface)**: Connects the VM to the virtual network, supporting network interactions and data transfer.
+- **my-VM-51382442_OsDisk_1_b32a2286... (Disk)**: Acts as the storage for the Ubuntu OS and system files, dedicated to the virtual machine’s operations.
 
 ![list_of_resources](images/week8-task3_list_of_resources.png)
 
-## Task 4: Create an Azure Virtual Machine and Allow Web Access
-**Azure Commands:** To create a Linux VM and configure Nginx on the VM.
+## Task 4:
+**Azure Commands:** Configured a Linux VM and deployed Nginx with its configuration:
 ```
 # To create a Linux VM
 az vm create \
@@ -41,16 +38,16 @@ az vm extension set \
 
 **Successfully accessing website with my name**:
 ![created_resource](images/week8-task4-accessing_web.png)
+
 **Network Security Rules:**
 - Port 22 (SSH):
   - Rule Name: default-allow-ssh
-  - Description: Allows Secure Shell (SSH) access to the VM for remote administration.
+  - Description: Enables remote management of the VM via SSH protocol.
 - Port 80 (HTTP):
   - Rule Name: AllowAnyHTTPInbound
-  - Description: Allows Hypertext Transfer Protocol (HTTP) access to serve web content.
-  
-## Task 5: Compare Cloud vs On-premise Costs
+  - Description: Allows web content delivery through HTTP traffic.
 
+## Task 5:
 ### Specifications and Costs Table
 
 | **Type**           | **CPU**          | **GPU**         | **RAM** | **Storage** | **Upfront Cost (AUD)** | **1-Year Running Cost (AUD)** | **3-Year Running Cost (AUD)** |
@@ -75,15 +72,14 @@ Now that the Azure VM meets the requirements, the comparison feels fairer. The d
 The Azure VM is more expensive, but it has some advantages. There’s no upfront cost, which is nice if I don’t have AUD 1,349 to spend right away. I can scale it up easily—like adding more CPU or storage—while upgrading the PC means buying new hardware. Azure takes care of maintenance, backups, and security updates, which saves me time, and I can access it from anywhere, unlike the PC, which stays at home. But the monthly cost adds up fast, and if I forget to turn it off, I’ll end up paying more. Also, slow internet could make it tricky to use, and without a GPU, it’s not great for graphics-heavy tasks.
 
 For me, the desktop PC is the better choice because it’s way cheaper and has a GPU, which I’d use for gaming. The Azure VM makes sense if I need flexibility and don’t want to deal with hardware maintenance, but the cost difference makes the PC more practical for my needs.
-
-## Task 6. Create a Storage Blob in Azure
-**Screenshot of Image:** Displays one image uploaded to the created container.
+## Task 6:
+**Screenshot of Image:** Presents a single image uploaded to the storage container.
 ![an_image](images/week8-task6_image.png)
 
-**Screenshot of Azure Portal:** Shows the created container in the Azure Portal.
+**Screenshot of Azure Portal:** Illustrates the storage container created within the Azure Portal.
 ![container](images/week8-task6_container.png)
 
-## Task 7. Create a Resource Lock
+## Task 7:
 **Difference Between Locks:**
-- **Read-Only Lock:** Blocks changes to a resource's configuration or properties (e.g., editing settings or resizing a VM), ensuring the resource remains as-is. Useful for protecting resource settings from accidental modifications.
-- **Delete Lock:** Prevents a resource from being deleted, ensuring it remains in the Azure environment, but allows changes to its configuration or properties. Ideal for safeguarding critical resources from accidental removal.
+- **Read-Only Lock:** Restricts alterations to a resource’s properties or settings (e.g., modifying VM configurations), ensuring its current state is preserved. This is useful for preventing unintended changes to critical setups.
+- **Delete Lock:** Blocks the deletion of a resource, keeping it active in the Azure environment while allowing modifications to its settings. This is ideal for protecting essential resources from accidental removal.
